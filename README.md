@@ -13,5 +13,5 @@ NODE_ENV=test yarn start get-block --block-number 3942728 --rpc-provider {ws_url
 ```
 
 ``` Load test with log dump
-NODE_ENV=test yarn start get-blocks-from --block-number 3860498 --connections 100 > out.log
+NODE_ENV=test yarn start get-blocks-from --block-number 1 --connections 100 --rpc-provider ws://127.0.0.1:9944 > test4.log
 ```
