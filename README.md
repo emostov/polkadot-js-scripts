@@ -4,14 +4,16 @@ Install deps:
 yarn
 ```
 
-``` Dump logs from starting from a block until failure
+``` Dump logs starting from a block until failure
 NODE_ENV=test yarn start get-blocks-from --block-number 3860498 --rpc-provider ws_url > out.log
 ```
 
 ``` Dump logs from a single block
-NODE_ENV=test yarn start get-block --block-number 3942728 --rpc-provider {ws_url} > out.log
+NODE_ENV=test yarn start get-block --block-number 3942728 --rpc-provider ws://127.0.0.1:9944
+
+
 ```
 
-``` Load test with log dump
-NODE_ENV=test yarn start get-blocks-from --block-number 1 --connections 100 --rpc-provider ws://127.0.0.1:9944 > test4.log
+``` Dump logs with a load test, starting from a block until failure
+NODE_ENV=test yarn start get-blocks-from --block-number 1 --connections 4 --rpc-provider ws://127.0.0.1:9944 > test5.log
 ```
